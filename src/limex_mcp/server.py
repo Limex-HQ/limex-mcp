@@ -1,3 +1,5 @@
+import sys
+import textwrap
 from typing import Any
 
 import httpx
@@ -116,7 +118,35 @@ async def get_prices() -> dict[str, Any]:
     return await _request("GET", "/v1/billing/prices")
 
 
+def _interactive_message() -> str:
+    return textwrap.dedent(
+        """
+        Limex MCP is installed.
+
+        This command is an MCP stdio server. It is meant to be started by Claude Code
+        or another MCP client, not run directly in a terminal.
+
+        Claude Code config:
+          {
+            "mcpServers": {
+              "limex": {
+                "command": "uvx",
+                "args": ["limex-mcp"],
+                "env": {
+                  "LIMEX_API_KEY": "your_limex_api_key",
+                  "LIMEX_API_BASE_URL": "https://api.getlimex.com"
+                }
+              }
+            }
+          }
+        """
+    ).strip()
+
+
 def main() -> None:
+    if sys.stdin.isatty():
+        print(_interactive_message(), file=sys.stderr)
+        return
     mcp.run()
 
 

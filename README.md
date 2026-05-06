@@ -11,13 +11,7 @@ Limex service.
 Create a Limex account first and generate a Limex API key from
 `https://getlimex.com/account`.
 
-Run the MCP server directly with `uvx`:
-
-```bash
-uvx limex-mcp
-```
-
-Then run:
+Install it into Claude Code:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Limex-HQ/limex-mcp/main/scripts/install.sh | bash
@@ -63,4 +57,5 @@ PyPI package name: `limex-mcp`.
 5. Create and publish a GitHub Release for a tag like `v0.1.0`.
 
 The release workflow builds the package, runs tests and lint, then publishes to PyPI through
-trusted publishing. After the first successful release, users can run `uvx limex-mcp`.
+trusted publishing. Claude Code starts the server with `uvx limex-mcp` from the MCP config; running
+that command in a terminal only prints setup guidance.
