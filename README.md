@@ -1,4 +1,4 @@
-# Limex MCP
+# limex MCP
 
 Public MCP server shim for Limex.
 

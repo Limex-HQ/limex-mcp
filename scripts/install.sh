@@ -3,7 +3,7 @@ set -euo pipefail
 
 api_base_url="${LIMEX_API_BASE_URL:-https://api.getlimex.com}"
 
-echo "Limex MCP setup"
+echo "limex MCP setup"
 echo
 echo "1. Create a Limex account and generate a Limex API key:"
 echo "   https://getlimex.com/account"
@@ -46,9 +46,9 @@ if command -v claude >/dev/null 2>&1; then
   claude mcp remove limex >/dev/null 2>&1 || true
   claude mcp add-json limex "${mcp_json}"
   echo
-  echo "Limex MCP installed in Claude Code."
+  echo "limex MCP installed in Claude Code."
   echo "Restart Claude Code if it is already running, then ask:"
-  echo "  Use Limex to research Sierra AI."
+  echo "  Use the limex research tool to research Sierra AI."
   exit 0
 fi
 
