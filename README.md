@@ -3,7 +3,7 @@
 Public MCP server shim for Limex.
 
 This package exposes MCP tools and forwards requests to the hosted Limex backing API. Provider
-routing, billing, budget enforcement, metering, and paid data integrations stay on the hosted
+routing, billing, metering, and paid data integrations stay on the hosted
 Limex service.
 
 ## Install

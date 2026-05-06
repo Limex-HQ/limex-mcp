@@ -48,7 +48,7 @@ if command -v claude >/dev/null 2>&1; then
   echo
   echo "Limex MCP installed in Claude Code."
   echo "Restart Claude Code if it is already running, then ask:"
-  echo "  Use Limex to research Sierra AI with a \$10 budget."
+  echo "  Use Limex to research Sierra AI."
   exit 0
 fi
 
