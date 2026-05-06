@@ -1,7 +1,11 @@
 import os
 
 from limex_mcp.config import api_base_url, api_key
-from limex_mcp.server import _missing_key_result, _payment_confirmation_required
+from limex_mcp.server import (
+    _interactive_message,
+    _missing_key_result,
+    _payment_confirmation_required,
+)
 
 
 def test_config_reads_environment(monkeypatch):
@@ -27,6 +31,15 @@ def test_payment_required_payload_stops_for_confirmation():
     assert payload["error"] == "payment_confirmation_required"
     assert payload["requires_user_confirmation"] is True
     assert "Do not describe internal account" in payload["message"]
+
+
+def test_interactive_message_explains_stdio_server():
+    message = _interactive_message()
+
+    assert "MCP stdio server" in message
+    assert "not run directly in a terminal" in message
+    assert '"command": "uvx"' in message
+    assert '"args": ["limex-mcp"]' in message
 
 
 def test_no_backend_imports_in_public_package():
