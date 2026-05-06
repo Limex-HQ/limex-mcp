@@ -7,7 +7,7 @@ from mcp.server.fastmcp import FastMCP
 
 from limex_mcp.config import api_base_url, api_key
 
-mcp = FastMCP("Limex")
+mcp = FastMCP("limex")
 
 
 def _headers() -> dict[str, str]:
@@ -121,7 +121,7 @@ async def get_prices() -> dict[str, Any]:
 def _interactive_message() -> str:
     return textwrap.dedent(
         """
-        Limex MCP is installed.
+        limex MCP is installed.
 
         This command is an MCP stdio server. It is meant to be started by Claude Code
         or another MCP client, not run directly in a terminal.
