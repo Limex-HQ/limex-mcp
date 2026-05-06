@@ -9,7 +9,7 @@ Limex service.
 ## Install
 
 Create a Limex account first and generate a Limex API key from
-`https://getlimex.com/account`. The key is shown once.
+`https://getlimex.com/account`.
 
 Run the MCP server directly with `uvx`:
 
