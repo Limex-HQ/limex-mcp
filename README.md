@@ -11,6 +11,12 @@ Limex service.
 Create a Limex account first and generate a Claude Code key from
 `https://getlimex.com/account`. The key is shown once.
 
+Then run:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Limex-HQ/limex-mcp/main/scripts/install.sh | bash
+```
+
 Claude Code config:
 
 ```json
