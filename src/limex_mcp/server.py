@@ -19,7 +19,7 @@ def _headers() -> dict[str, str]:
 def _missing_key_result() -> dict[str, Any]:
     return {
         "error": "missing_api_key",
-        "message": "Create a Limex account, generate a Claude Code key, and set LIMEX_API_KEY.",
+        "message": "Create a Limex account, generate a Limex API key, and set LIMEX_API_KEY.",
     }
 
 

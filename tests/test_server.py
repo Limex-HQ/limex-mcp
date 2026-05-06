@@ -18,7 +18,7 @@ def test_missing_key_message_points_to_account(monkeypatch):
     result = _missing_key_result()
 
     assert result["error"] == "missing_api_key"
-    assert "generate a Claude Code key" in result["message"]
+    assert "generate a Limex API key" in result["message"]
 
 
 def test_payment_required_payload_stops_for_confirmation():

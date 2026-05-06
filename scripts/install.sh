@@ -5,7 +5,7 @@ api_base_url="${LIMEX_API_BASE_URL:-https://api.getlimex.com}"
 
 echo "Limex MCP setup"
 echo
-echo "1. Create a Limex account and generate a Claude Code key:"
+echo "1. Create a Limex account and generate a Limex API key:"
 echo "   https://getlimex.com/account"
 echo
 
@@ -22,7 +22,7 @@ if [[ ! -r /dev/tty ]]; then
   exit 1
 fi
 
-read -r -s -p "Paste your Limex Claude Code key: " limex_api_key < /dev/tty
+read -r -s -p "Paste your Limex API key: " limex_api_key < /dev/tty
 echo
 
 if [[ -z "${limex_api_key}" ]]; then

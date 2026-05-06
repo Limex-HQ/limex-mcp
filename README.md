@@ -8,7 +8,7 @@ Limex service.
 
 ## Install
 
-Create a Limex account first and generate a Claude Code key from
+Create a Limex account first and generate a Limex API key from
 `https://getlimex.com/account`. The key is shown once.
 
 Then run:
@@ -26,7 +26,7 @@ Claude Code config:
       "command": "uvx",
       "args": ["limex-mcp"],
       "env": {
-        "LIMEX_API_KEY": "your_claude_code_key",
+        "LIMEX_API_KEY": "your_limex_api_key",
         "LIMEX_API_BASE_URL": "https://api.getlimex.com"
       }
     }
